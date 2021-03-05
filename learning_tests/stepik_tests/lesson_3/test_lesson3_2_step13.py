@@ -14,7 +14,7 @@ class TestAbs(unittest.TestCase):
         browser.find_element_by_xpath("//div[@class='first_block']/div[@class='form-group third_class']/input").send_keys("ivan_petrov@yandex.ru")
         browser.find_element_by_css_selector("button.btn").click()
         time.sleep(5)
-        welcome_text_elt = browser.find_element_by_xpath("/html/body/div/h1")
+        welcome_text_elt = browser.find_element_by_xpath("//h1")
         welcome_text = welcome_text_elt.text
         self.assertNotEqual(welcome_text, "Not Found Welcome text")
         browser.quit()
@@ -28,7 +28,7 @@ class TestAbs(unittest.TestCase):
         browser.find_element_by_xpath("//div[@class='first_block']/div[@class='form-group third_class']/input").send_keys("ivan_petrov@yandex.ru")
         browser.find_element_by_css_selector("button.btn").click()
         time.sleep(5)
-        welcome_text_elt = browser.find_element_by_xpath("/html/body/div/h1")
+        welcome_text_elt = browser.find_element_by_xpath("//h1")
         welcome_text = welcome_text_elt.text
         self.assertNotEqual(welcome_text, "Not Found Welcome text")
         browser.quit()
