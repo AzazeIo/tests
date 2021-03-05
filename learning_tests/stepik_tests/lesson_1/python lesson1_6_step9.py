@@ -6,15 +6,10 @@ try:
     browser = webdriver.Chrome()
     browser.get(link)
 
-    input1 = browser.find_element_by_xpath("//div[@class='first_block']/div[@class='form-group first_class']/input")
-    input1.send_keys("Ivan")
-    input2 = browser.find_element_by_xpath("//div[@class='first_block']/div[@class='form-group second_class']/input")
-    input2.send_keys("Petrov")
-    input3 = browser.find_element_by_xpath("//div[@class='first_block']/div[@class='form-group third_class']/input")
-    input3.send_keys("ivan_petrov@yandex.ru")
-
-    button = browser.find_element_by_css_selector("button.btn")
-    button.click()
+    input1 = browser.find_element_by_xpath("//div[@class='first_block']/div[@class='form-group first_class']/input").send_keys("Ivan")
+    input2 = browser.find_element_by_xpath("//div[@class='first_block']/div[@class='form-group second_class']/input").send_keys("Petrov")
+    input3 = browser.find_element_by_xpath("//div[@class='first_block']/div[@class='form-group third_class']/input").send_keys("ivan_petrov@yandex.ru")
+    button = browser.find_element_by_css_selector("button.btn").click()
 
     time.sleep(1)
 
