@@ -1,0 +1,6 @@
+[pytest]
+markers =
+    smoke: blokers test which must started immediately after commit
+    regression: kit of regression tests before release
+    xfail: fail test
+    skip: test skipped
