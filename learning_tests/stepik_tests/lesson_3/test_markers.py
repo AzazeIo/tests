@@ -17,7 +17,7 @@ class TestMarkers:
         welcome_text = welcome_text_elt.text
         assert "Congratulations! You have successfully registered!" == welcome_text
 
-    @pytest.mark.regression
+    @pytest.mark.xfail
     def test_markers_two(self, browser):
         link = "http://suninjuly.github.io/registration2.html"
         browser.get(link)
